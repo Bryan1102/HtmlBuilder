@@ -1,6 +1,7 @@
 
 package com.anthorra.htmlbuilder;
 
+import com.anthorra.htmlbuilder.Utils.TagCounter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -46,6 +47,18 @@ public class HtmlDocumentTest
         HtmlDocument instance = new HtmlDocument();
         boolean isDoctypeCorrect = instance.contructElement().toLowerCase().contains("<!doctype html>");
         assertTrue(isDoctypeCorrect, "FAILED: Doctype");
+    }
+    
+    @Test
+    public void testCloseTags()
+    {
+        System.out.println("TESTING: <html>Tags</html>");
+        HtmlDocument instance = new HtmlDocument();
+        boolean isHtmlTagClosed = TagCounter.matchTags(instance.getElement(), "html"); 
+        assertTrue(isHtmlTagClosed, "FAILED: <html>Tags</html>");
+        
+        int countTags = TagCounter.count(instance.getElement(), "<html>");
+        assertEquals(1, countTags, "FAILED: only 1 <html> allowed");
     }
     
     @Test

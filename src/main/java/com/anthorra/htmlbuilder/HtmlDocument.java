@@ -29,10 +29,24 @@ public class HtmlDocument extends HtmlElement
     /* CONSTRUCTOR */
     public HtmlDocument()
     {
-        this.htmlhead = new HtmlHead();
-        this.htmlbody = new HtmlBody();
+        setHtmlhead(new HtmlHead());
+        setHtmlbody(new HtmlBody());
     }
-
+    public HtmlDocument(HtmlHead htmlhead)
+    {
+        setHtmlhead(htmlhead);
+        setHtmlbody(new HtmlBody());
+    }
+    public HtmlDocument(HtmlBody htmlbody)
+    {
+        setHtmlhead(new HtmlHead());
+        setHtmlbody(htmlbody);
+    }
+    public HtmlDocument(HtmlHead htmlhead, HtmlBody htmlbody)
+    {
+        setHtmlhead(htmlhead);
+        setHtmlbody(htmlbody);
+    }
     
     /* GETTERS */
     public HtmlHead getHtmlhead()
@@ -45,6 +59,16 @@ public class HtmlDocument extends HtmlElement
         return htmlbody;
     }
     
+    /* SETTERS */
+    public void setHtmlhead(HtmlHead htmlhead)
+    {
+        this.htmlhead = htmlhead;
+    }
+
+    public void setHtmlbody(HtmlBody htmlbody)
+    {
+        this.htmlbody = htmlbody;
+    }
     
     
     

@@ -1,5 +1,7 @@
 package com.anthorra.htmlbuilder;
 
+import com.anthorra.htmlbuilder.Utils.TagCounter;
+        
 /**
  *
  * @author Anthorra
@@ -12,8 +14,11 @@ public class HtmlBuilder
         HtmlDocument doc = new HtmlDocument();
         System.out.println(doc.getElement());
         
+        String docstring = doc.getElement();
         
-        //doc.getHtmlhead().attr
+        
+        boolean isHtmlTagClosed = TagCounter.matchTags(docstring, "html"); 
+        System.out.println(isHtmlTagClosed);
         
         
         /*

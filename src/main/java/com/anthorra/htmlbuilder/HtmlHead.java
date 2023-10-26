@@ -10,15 +10,10 @@ public class HtmlHead extends HtmlElement
     private String head;
     
     private HashMap<String, String> attributes;
-//    private String title;
-//    private String charset;
-//    private String stylesheet;
-//    private String jScript;
-    private ArrayList<String> scripts;
 
+    /* CONSTRUCTOR */
     public HtmlHead()
     {
-        scripts = new ArrayList<>();
     }
     
     @Override
@@ -45,7 +40,7 @@ public class HtmlHead extends HtmlElement
     }
     
     
-
+    /* GETTERS */
     public String getHead()
     {
         return contructElement();
