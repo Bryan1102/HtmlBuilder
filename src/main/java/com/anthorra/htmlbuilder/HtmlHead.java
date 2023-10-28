@@ -3,6 +3,8 @@ package com.anthorra.htmlbuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class HtmlHead extends HtmlElement
@@ -23,7 +25,19 @@ public class HtmlHead extends HtmlElement
     {
         head = "<head>";
         
-        if(title != null){head += "<title>" + title + "</title>";}
+        if(title == null)
+        {
+            Logger.getLogger(HtmlHead.class.getName()).log(Level.WARNING, "HTML <head> must have a <title>! Use setTitle method to specify!");
+        }
+        else
+        {
+            head += "<title>" + title + "</title>";
+        }
+
+        
+        
+
+        
 //        if(charset != null){head += "<meta charset=\"" + charset + "\">";}else{head += "<meta charset=\"UTF-8\">";}
 //        head += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
 //        if(stylesheet != null){head += "<link rel=\"stylesheet\" href=\"" + stylesheet + "\">";}
@@ -55,6 +69,5 @@ public class HtmlHead extends HtmlElement
     }
     
     
-
     
 }

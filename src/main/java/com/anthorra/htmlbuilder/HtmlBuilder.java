@@ -11,22 +11,26 @@ public class HtmlBuilder
 
     public static void main(String[] args) 
     {
-        HtmlDocument doc = new HtmlDocument();
-        System.out.println(doc.getElement());
+       
+            HtmlDocument doc = new HtmlDocument();
+            //doc.getHtmlhead().setTitle("test title");
+            
+            System.out.println(doc.getElement());
+            
+            //String docstring = doc.getElement();
+            
+            
+            
+            
+            
+            /*
+            Integration test
+            
+            https://html.spec.whatwg.org/multipage/syntax.html#syntax-doctype
+            - include doctype test
+            In other words, <!DOCTYPE html>, case-insensitively.
+            */
         
-        String docstring = doc.getElement();
-        
-        
-        
-        
-        
-        /*
-        Integration test
-        
-        https://html.spec.whatwg.org/multipage/syntax.html#syntax-doctype
-        - include doctype test
-        In other words, <!DOCTYPE html>, case-insensitively.
-        */
 
 
 

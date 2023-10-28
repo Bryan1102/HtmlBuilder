@@ -1,10 +1,6 @@
 
 package com.anthorra.htmlbuilder;
 
-import java.util.HashMap;
-
-
-
 /**
  *
  * @author Anthorra
