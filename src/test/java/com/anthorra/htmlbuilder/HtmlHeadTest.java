@@ -1,7 +1,6 @@
 package com.anthorra.htmlbuilder;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,25 +26,17 @@ public class HtmlHeadTest
     {
     }
 
-    /*
+    
     @Test
     public void testContructElement()
     {
         System.out.println("TESTING HEAD: contruct new Html Head");
         HtmlHead instance = new HtmlHead();
-        //String expResult = "<head></head>";
-        //String result = instance.contructElement();
-        //assertThrows(HtmlException, instance.contructElement());
-        //assertEquals(expResult, result);
+        String expResult = "<head></head>";
+        String result = instance.contructElement();
         
-        
-        HtmlException thrown = Assertions.assertThrows(HtmlException.class, () -> 
-        {
-           instance.contructElement();
-        }
-        );
-        
-    }*/
+        assertEquals(expResult, result);
+    }
 
     @Test
     public void testSetTitle()

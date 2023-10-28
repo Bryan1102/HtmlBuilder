@@ -1,6 +1,7 @@
 
 package com.anthorra.htmlbuilder;
 
+import com.anthorra.htmlbuilder.HeadElements.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Level;
@@ -13,7 +14,8 @@ public class HtmlHead extends HtmlElement
     
     private String title;
     
-    private HashMap<String, String> attributes;
+    private ArrayList<Meta> metaList;
+    //private HashMap<String, String> attributes;
 
     /* CONSTRUCTOR */
     public HtmlHead()

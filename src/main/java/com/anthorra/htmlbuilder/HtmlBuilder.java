@@ -13,7 +13,7 @@ public class HtmlBuilder
     {
        
             HtmlDocument doc = new HtmlDocument();
-            //doc.getHtmlhead().setTitle("test title");
+            doc.getHtmlhead().setTitle("test title");
             
             System.out.println(doc.getElement());
             
