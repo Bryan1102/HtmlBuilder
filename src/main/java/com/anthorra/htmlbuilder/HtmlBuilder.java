@@ -17,8 +17,7 @@ public class HtmlBuilder
         String docstring = doc.getElement();
         
         
-        boolean isHtmlTagClosed = TagCounter.matchTags(docstring, "html"); 
-        System.out.println(isHtmlTagClosed);
+        
         
         
         /*

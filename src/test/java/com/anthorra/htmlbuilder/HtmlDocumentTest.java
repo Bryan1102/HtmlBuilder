@@ -31,7 +31,7 @@ public class HtmlDocumentTest
     @Test
     public void testContructElement()
     {
-        System.out.println("TESTING: contruct Html Document");
+        System.out.println("TESTING DOCUMENT: contruct Html Document");
         HtmlDocument instance = new HtmlDocument();
         String expResult = "<!DOCTYPE html><html><head></head><body></body></html>";
         String result = instance.contructElement();
@@ -43,7 +43,7 @@ public class HtmlDocumentTest
     public void testDoctype()
     {
         //https://html.spec.whatwg.org/multipage/syntax.html#the-doctype
-        System.out.println("TESTING: Doctype");
+        System.out.println("TESTING DOCUMENT: Doctype");
         HtmlDocument instance = new HtmlDocument();
         boolean isDoctypeCorrect = instance.contructElement().toLowerCase().contains("<!doctype html>");
         assertTrue(isDoctypeCorrect, "FAILED: Doctype");
@@ -52,7 +52,7 @@ public class HtmlDocumentTest
     @Test
     public void testCloseTags()
     {
-        System.out.println("TESTING: <html>Tags</html>");
+        System.out.println("TESTING DOCUMENT: <html>Tags</html>");
         HtmlDocument instance = new HtmlDocument();
         boolean isHtmlTagClosed = TagCounter.matchTags(instance.getElement(), "html"); 
         assertTrue(isHtmlTagClosed, "FAILED: <html>Tags</html>");
