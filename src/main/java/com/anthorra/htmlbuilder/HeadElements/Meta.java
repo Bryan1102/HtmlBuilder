@@ -6,7 +6,14 @@ package com.anthorra.htmlbuilder.HeadElements;
  */
 public class Meta
 {
-    private String name;
-    private String value;
+    public String name;
+    public String content;
+
+    public Meta(String name, String content)
+    {
+        this.name = name;
+        this.content = content;
+    }
+    
     
 }

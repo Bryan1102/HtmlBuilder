@@ -20,6 +20,7 @@ public class HtmlHead extends HtmlElement
     /* CONSTRUCTOR */
     public HtmlHead()
     {
+        metaList = new ArrayList<>();
     }
     
     @Override
@@ -35,7 +36,15 @@ public class HtmlHead extends HtmlElement
         {
             head += "<title>" + title + "</title>";
         }
-
+        
+        if(metaList != null && !metaList.isEmpty())
+        {
+            for(Meta m : metaList)
+            {
+                head += "<meta name=\"" + m.name + "\" content=\"" + m.content + "\">";
+            }
+        }
+        
         
         
 
@@ -56,6 +65,13 @@ public class HtmlHead extends HtmlElement
         
         return head;
     }
+    
+    /* METHODS */
+    public void addMeta(String name, String content)
+    {
+        metaList.add(new Meta(name, content));
+    }
+    
     
     /* SETTERS */
     public void setTitle(String title)

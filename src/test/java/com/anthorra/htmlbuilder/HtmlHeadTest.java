@@ -50,6 +50,23 @@ public class HtmlHeadTest
         String result = instance.contructElement();
         assertEquals(expResult, result);
     }
+    
+    @Test
+    public void testAddMeta()
+    {
+        System.out.println("TESTING HEAD: testAddMeta");
+        String title = "title";
+        HtmlHead instance = new HtmlHead();
+        instance.setTitle(title);
+        instance.addMeta("charset", "UTF-8");
+        
+        
+        String expResult = "<head><title>title</title><meta name=\"charset\" content=\"UTF-8\"></head>";
+        String result = instance.contructElement();
+        assertEquals(expResult, result);
+    }
+    
+    
 /*
     @Test
     public void testGetHead()
